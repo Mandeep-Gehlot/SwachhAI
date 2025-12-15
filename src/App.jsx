@@ -15,7 +15,7 @@ import {
 
 // --- Constants ---
 // IMPORTANT: If running this locally, you MUST replace the key below.
-const GEMINI_API_KEY = "AIzaSyDGb9DuWMEeOgCdf7Yz6yElj-Hr8WTLOBc"; 
+const GEMINI_API_KEY = "API_Key"; 
 
 const INR_PER_USD = 83; // Exchange rate for INR value calculation
 const API_URL_GEMINI = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${GEMINI_API_KEY}`;
