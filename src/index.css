@@ -1,1 +1,47 @@
 @import "tailwindcss";
+
+/* Custom Base Styles */
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0f172a; /* Fallback */
+  overflow-x: hidden;
+}
+
+/* Animated Mesh Gradient Background */
+.animated-bg {
+  background: radial-gradient(at 0% 0%, hsla(158,82%,57%,1) 0, transparent 50%), 
+              radial-gradient(at 50% 0%, hsla(188,72%,57%,1) 0, transparent 50%), 
+              radial-gradient(at 100% 0%, hsla(158,82%,57%,1) 0, transparent 50%), 
+              radial-gradient(at 0% 100%, hsla(188,72%,57%,1) 0, transparent 50%), 
+              radial-gradient(at 100% 100%, hsla(158,82%,57%,1) 0, transparent 50%);
+  background-size: 200% 200%;
+  animation: gradient-move 15s ease infinite;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
